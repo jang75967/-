@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="${relativePackage}.${activityClass}" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/page3_preday"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="&lt;"
+                android:textSize="20dp"
+                android:textColor="#0054FF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00월 00일 (00)"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:layout_marginLeft="40dp" />
+            <TextView
+                android:id="@+id/contain_nextday"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="&gt;"
+                android:textSize="20dp"
+                android:textColor="#0054FF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#B2CCFF"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이번달 사용 금액은"
+                android:textSize="15dp"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#B2CCFF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000,000원 입니다."
+                android:textSize="15dp"
+                android:gravity="top"
+                android:id="@+id/month_goal"
+                android:layout_gravity="top"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

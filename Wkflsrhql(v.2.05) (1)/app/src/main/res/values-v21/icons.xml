@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fa_angle_up">&#xf106;</string>
+    <string name="fa_angle_down">&#xf107;</string>
+</resources>

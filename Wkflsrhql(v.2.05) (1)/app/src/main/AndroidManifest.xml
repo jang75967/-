@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hara.wkflsrhqlv11">
+
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Page1.Page1_today_list_waring"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity
+            android:name=".alarm.AlarmActivity_day"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity
+            android:name=".alarm.AlarmActivity_overmax"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity
+            android:name=".alarm.AlarmActivity_week"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <receiver
+            android:name=".alarm.AlarmReceive"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <receiver android:name=".MMS.SMSBroadcastReceiver"
+                  android:exported="true"
+                  android:enabled="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+
+
+    </application>
+
+    <receiver android:name=".ServiceReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.PHONE_STATE" />
+        </intent-filter>
+    </receiver>
+
+
+</manifest>
